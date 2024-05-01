@@ -1,4 +1,4 @@
-import { DATABASE_URL } from "@/vars";
+import { DB_URL } from "@/vars";
 import type { Config } from "drizzle-kit";
 
 export default {
@@ -6,6 +6,6 @@ export default {
   out: "./drizzle",
   driver: "pg",
   dbCredentials: {
-    connectionString: DATABASE_URL,
+    connectionString: DB_URL,
   },
 } satisfies Config;

@@ -1,11 +1,14 @@
 import {
   timestamp,
-  pgTable,
   text,
   primaryKey,
   integer,
+  pgTableCreator,
 } from "drizzle-orm/pg-core";
 import type { AdapterAccount } from "@auth/core/adapters";
+import { DB_TABLE_PREFIX } from "./vars";
+
+const pgTable = pgTableCreator((name) => `${DB_TABLE_PREFIX}${name}`);
 
 export const users = pgTable("user", {
   id: text("id").notNull().primaryKey(),

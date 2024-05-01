@@ -1,5 +1,3 @@
-import Image from "next/image";
-
-export default function () {
+export default async function () {
   return <main></main>;
 }
