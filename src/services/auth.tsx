@@ -20,7 +20,4 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: DrizzleAdapter(db),
   providers,
   trustHost: true,
-  pages: {
-    signIn: "/signin",
-  },
 });
