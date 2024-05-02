@@ -1,11 +1,11 @@
 import NextAuth from "next-auth";
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
-import { db } from "./db";
 import { SECRET } from "@/vars";
+import { db } from "@/services/db";
 
-export const auth = NextAuth({
+export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: DrizzleAdapter(db),
+  providers: [],
   secret: SECRET,
   trustHost: true,
-  providers: [],
 });
