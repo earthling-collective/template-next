@@ -6,9 +6,9 @@ import {
   pgTableCreator,
 } from "drizzle-orm/pg-core";
 import type { AdapterAccount } from "next-auth/adapters";
-import { DB_TABLE_PREFIX } from "./vars";
+import { DATABASE_TABLE_PREFIX } from "./vars";
 
-const pgTable = pgTableCreator((name) => `${DB_TABLE_PREFIX}${name}`);
+const pgTable = pgTableCreator((name) => `${DATABASE_TABLE_PREFIX}${name}`);
 
 export const users = pgTable("user", {
   id: text("id")

@@ -1,6 +1,7 @@
 export const SECRET = process.env.SECRET || "njifrbf0ybrf10ugfr93tvg13";
 
-export const DB_URL = (process.env.DB_URL || process.env.DATABASE_URL)!;
+export const DATABASE_URL = process.env.DATABASE_URL;
+export const DATABASE_TABLE_PREFIX = process.env.DATABASE_TABLE_PREFIX;
 
-export const DB_TABLE_PREFIX =
-  process.env.DB_TABLE_PREFIX || process.env.DATABASE_TABLE_PREFIX;
+export const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
+export const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
