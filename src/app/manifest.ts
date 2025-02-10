@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "template-ssr",
-    short_name: "template-ssr",
+    name: "template-name",
+    short_name: "template-name",
     icons: [
       {
         src: "/icon.svg",
