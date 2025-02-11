@@ -16,7 +16,7 @@ const monoFont = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "template-display-name",
+  title: "earthling-template-display-name",
   description: "",
 };
 
@@ -29,7 +29,9 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="system"
-      className={`${[displayFont, bodyFont, monoFont].map((x) => x.variable).join(" ")}`}
+      className={`${[displayFont, bodyFont, monoFont]
+        .map((x) => x.variable)
+        .join(" ")}`}
     >
       <body className={`antialiased`}>{children}</body>
     </html>
